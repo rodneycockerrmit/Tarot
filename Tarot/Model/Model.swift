@@ -17,19 +17,6 @@ class Model
     
     init()
     {
-        answers.append("Look to the stars to find your answer")
-        
-        answers += ["But dad, don't we eat the antelope"]
-        
-        answers.insert("You can't do this alone", at: 3)
-        
-        answers.remove(at: 4)
-        
-        answers.removeLast()
-        
-        print(answers)
-        
-        print(respond())
     }
     
     func respond() -> String
