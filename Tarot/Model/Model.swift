@@ -10,19 +10,19 @@ import Foundation
 
 class Model
 {
-    var answers:[String] = ["Go forth with faith",
-                            "Magic is on your side",
-                            "Plant the seed and it will grow",
-                            "Another item"]
+    let majorArcanaCards:[String: MajorArcanaCard]
+    var currentCard:MajorArcanaCard = MajorArcanaCard.fool
     
-    init()
-    {
+    init(){
+        majorArcanaCards = MajorArcanaCard.createDeck()
     }
-    
+
     func respond() -> String
     {
-        let response = Int(arc4random_uniform(UInt32(answers.count)))
-        return answers[response]
+        let response = Int(arc4random_uniform(UInt32(majorArcanaCards.count)))
+
+        currentCard = Array(majorArcanaCards.values)[response]
+        
+        return currentCard.interpretation
     }
-    
 }

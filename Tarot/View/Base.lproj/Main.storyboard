@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Oracle Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tarot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="OracleController" customModule="Tarot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,6 +23,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Think of a question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kok-Cf-m97">
                                 <rect key="frame" x="57" y="567" width="300" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="answer"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,6 +39,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Kok-Cf-m97" firstAttribute="top" secondItem="MIR-M2-dX1" secondAttribute="bottom" constant="8" id="4uQ-Ps-Fo0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MIR-M2-dX1" secondAttribute="trailing" constant="57" id="7Hw-56-qNJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MIR-M2-dX1" secondAttribute="bottom" constant="177" id="ELC-cV-yd9"/>
                             <constraint firstItem="Kok-Cf-m97" firstAttribute="leading" secondItem="MIR-M2-dX1" secondAttribute="leading" id="LEm-Cr-cas"/>
                             <constraint firstItem="Kok-Cf-m97" firstAttribute="trailing" secondItem="MIR-M2-dX1" secondAttribute="trailing" id="OjB-hS-gD2"/>
@@ -46,11 +48,13 @@
                             <constraint firstItem="A7x-xk-yUc" firstAttribute="trailing" secondItem="MIR-M2-dX1" secondAttribute="trailing" id="ZFX-pp-D3L"/>
                             <constraint firstItem="A7x-xk-yUc" firstAttribute="leading" secondItem="MIR-M2-dX1" secondAttribute="leading" id="rg2-p1-Kyv"/>
                             <constraint firstItem="MIR-M2-dX1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tVJ-ue-p2I"/>
+                            <constraint firstItem="MIR-M2-dX1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="wkG-F3-tiq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="cardDescription" destination="Kok-Cf-m97" id="Hht-j2-0Ob"/>
+                        <outlet property="imgCard" destination="MIR-M2-dX1" id="Uaq-hg-npq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -8,26 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		012B7428204A515200ADEA79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B7427204A515200ADEA79 /* AppDelegate.swift */; };
-		012B742A204A515200ADEA79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B7429204A515200ADEA79 /* ViewController.swift */; };
+		012B742A204A515200ADEA79 /* OracleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B7429204A515200ADEA79 /* OracleController.swift */; };
 		012B742D204A515200ADEA79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012B742B204A515200ADEA79 /* Main.storyboard */; };
 		012B742F204A515200ADEA79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012B742E204A515200ADEA79 /* Assets.xcassets */; };
 		012B7432204A515200ADEA79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012B7430204A515200ADEA79 /* LaunchScreen.storyboard */; };
 		012B743F204B55C800ADEA79 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B743E204B55C800ADEA79 /* Model.swift */; };
+		01A6C2C420537DB80078C726 /* MajorArcanaCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A6C2C320537DB80078C726 /* MajorArcanaCard.swift */; };
+		01A6C2CC2053A5950078C726 /* TarotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A6C2CB2053A5950078C726 /* TarotUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01A6C2CE2053A5950078C726 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 012B741C204A515200ADEA79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 012B7423204A515200ADEA79;
+			remoteInfo = Tarot;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		012B7424204A515200ADEA79 /* Tarot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012B7427204A515200ADEA79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		012B7429204A515200ADEA79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		012B7429204A515200ADEA79 /* OracleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OracleController.swift; sourceTree = "<group>"; };
 		012B742C204A515200ADEA79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		012B742E204A515200ADEA79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		012B7431204A515200ADEA79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		012B7433204A515200ADEA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		012B743E204B55C800ADEA79 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		01A6C2C320537DB80078C726 /* MajorArcanaCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorArcanaCard.swift; sourceTree = "<group>"; };
+		01A6C2C92053A5940078C726 /* TarotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TarotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01A6C2CB2053A5950078C726 /* TarotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotUITests.swift; sourceTree = "<group>"; };
+		01A6C2CD2053A5950078C726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		012B7421204A515200ADEA79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01A6C2C62053A5940078C726 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				012B7426204A515200ADEA79 /* Tarot */,
+				01A6C2CA2053A5950078C726 /* TarotUITests */,
 				012B7425204A515200ADEA79 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				012B7424204A515200ADEA79 /* Tarot.app */,
+				01A6C2C92053A5940078C726 /* TarotUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				012B743E204B55C800ADEA79 /* Model.swift */,
+				01A6C2C320537DB80078C726 /* MajorArcanaCard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -86,9 +112,18 @@
 		012B743B204A51F900ADEA79 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				012B7429204A515200ADEA79 /* ViewController.swift */,
+				012B7429204A515200ADEA79 /* OracleController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		01A6C2CA2053A5950078C726 /* TarotUITests */ = {
+			isa = PBXGroup;
+			children = (
+				01A6C2CB2053A5950078C726 /* TarotUITests.swift */,
+				01A6C2CD2053A5950078C726 /* Info.plist */,
+			);
+			path = TarotUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,6 +146,24 @@
 			productReference = 012B7424204A515200ADEA79 /* Tarot.app */;
 			productType = "com.apple.product-type.application";
 		};
+		01A6C2C82053A5940078C726 /* TarotUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01A6C2D02053A5950078C726 /* Build configuration list for PBXNativeTarget "TarotUITests" */;
+			buildPhases = (
+				01A6C2C52053A5940078C726 /* Sources */,
+				01A6C2C62053A5940078C726 /* Frameworks */,
+				01A6C2C72053A5940078C726 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01A6C2CF2053A5950078C726 /* PBXTargetDependency */,
+			);
+			name = TarotUITests;
+			productName = TarotUITests;
+			productReference = 01A6C2C92053A5940078C726 /* TarotUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -124,6 +177,11 @@
 					012B7423204A515200ADEA79 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					01A6C2C82053A5940078C726 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 012B7423204A515200ADEA79;
 					};
 				};
 			};
@@ -141,6 +199,7 @@
 			projectRoot = "";
 			targets = (
 				012B7423204A515200ADEA79 /* Tarot */,
+				01A6C2C82053A5940078C726 /* TarotUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -156,6 +215,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01A6C2C72053A5940078C726 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -164,12 +230,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				012B743F204B55C800ADEA79 /* Model.swift in Sources */,
-				012B742A204A515200ADEA79 /* ViewController.swift in Sources */,
+				01A6C2C420537DB80078C726 /* MajorArcanaCard.swift in Sources */,
+				012B742A204A515200ADEA79 /* OracleController.swift in Sources */,
 				012B7428204A515200ADEA79 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01A6C2C52053A5940078C726 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01A6C2CC2053A5950078C726 /* TarotUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01A6C2CF2053A5950078C726 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 012B7423204A515200ADEA79 /* Tarot */;
+			targetProxy = 01A6C2CE2053A5950078C726 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		012B742B204A515200ADEA79 /* Main.storyboard */ = {
@@ -328,6 +411,36 @@
 			};
 			name = Release;
 		};
+		01A6C2D12053A5950078C726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D5UTE2BUT;
+				INFOPLIST_FILE = TarotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.e07582.TarotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tarot;
+			};
+			name = Debug;
+		};
+		01A6C2D22053A5950078C726 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D5UTE2BUT;
+				INFOPLIST_FILE = TarotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.e07582.TarotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tarot;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -345,6 +458,15 @@
 			buildConfigurations = (
 				012B7437204A515200ADEA79 /* Debug */,
 				012B7438204A515200ADEA79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01A6C2D02053A5950078C726 /* Build configuration list for PBXNativeTarget "TarotUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01A6C2D12053A5950078C726 /* Debug */,
+				01A6C2D22053A5950078C726 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

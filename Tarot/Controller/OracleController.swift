@@ -8,15 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class OracleController: UIViewController
 {
     var model:Model = Model()
     
     @IBOutlet weak var cardDescription: UILabel!
     
+    
+    @IBOutlet weak var imgCard: UIImageView!
+    
+    
     @IBAction func respond(_ sender: Any)
     {
         cardDescription.text = model.respond()
+
+        imgCard.image = UIImage(named: model.currentCard.imageName)
     }
     
     override func viewDidLoad()
