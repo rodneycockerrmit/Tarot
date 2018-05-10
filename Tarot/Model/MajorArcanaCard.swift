@@ -12,6 +12,42 @@ enum MajorArcanaCard:Int
 {
     case fool=1, magician, highPriestess, empress, emperor, heirophant, lovers, chariot, justice, hermit, wheelOfFortune, strength, hangedMan, death, temperance, devil, tower, star, moon, sun, judgement, world
     
+    init()
+    {
+        self = .fool
+    }
+    
+    init?(number:Int)
+    {
+        switch number {
+            case 1 : self = .fool
+            case 2: self = .magician
+            case 3: self = .highPriestess
+            case 4: self = .empress
+            case 5: self = .emperor
+            case 6: self = .heirophant
+            case 7: self = .lovers
+            case 8: self = .chariot
+            case 9: self = .justice
+            case 10: self = .hermit
+            case 11: self = .wheelOfFortune
+            case 12: self = .strength
+            case 13: self = .hangedMan
+            case 14: self = .death
+            case 15: self = .temperance
+            case 16: self = .devil
+            case 17: self = .tower
+            case 18: self = .star
+            case 19: self = .moon
+            case 20: self = .sun
+            case 21: self = .judgement
+            case 22: self = .world
+            default: return nil
+        }
+    }
+    
+    
+    
     var rank:Int
     {
         get{
@@ -119,7 +155,7 @@ enum MajorArcanaCard:Int
                 judgement, world]
     }
     
-    static func createDeck() ->[String:MajorArcanaCard]
+    static func getCardDictionary() ->[String:MajorArcanaCard]
     {
         // Create a dictionary object to return to the caller
         var majorArcana:[String:MajorArcanaCard] = [:]

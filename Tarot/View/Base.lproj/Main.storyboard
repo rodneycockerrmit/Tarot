@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,9 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fool" translatesAutoresizingMaskIntoConstraints="NO" id="MIR-M2-dX1">
-                                <rect key="frame" x="57" y="40" width="300" height="519"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Think of a question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kok-Cf-m97">
                                 <rect key="frame" x="57" y="567" width="300" height="21"/>
                                 <accessibility key="accessibilityConfiguration" identifier="answer"/>
@@ -35,26 +33,66 @@
                                     <action selector="respond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fqw-Dn-7aJ"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCm-Ty-e0a" userLabel="Placeholder">
+                                <rect key="frame" x="57" y="40" width="300" height="519"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fool" translatesAutoresizingMaskIntoConstraints="NO" id="MIR-M2-dX1">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="519"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYn-Vn-kBs" userLabel="faded">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="519"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCl-xZ-LFc" userLabel="description">
+                                        <rect key="frame" x="5" y="5" width="290" height="509"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nCm-Ty-e0a" secondAttribute="height" multiplier="100:173" id="2BU-ar-aMB"/>
+                                    <constraint firstAttribute="bottom" secondItem="qCl-xZ-LFc" secondAttribute="bottom" constant="5" id="3Qy-WO-A8n"/>
+                                    <constraint firstItem="qYn-Vn-kBs" firstAttribute="top" secondItem="nCm-Ty-e0a" secondAttribute="top" id="6OH-QG-V0l"/>
+                                    <constraint firstAttribute="width" constant="300" id="BdT-yL-AuB"/>
+                                    <constraint firstItem="MIR-M2-dX1" firstAttribute="top" secondItem="nCm-Ty-e0a" secondAttribute="top" id="HWO-jB-q1V"/>
+                                    <constraint firstItem="qCl-xZ-LFc" firstAttribute="leading" secondItem="nCm-Ty-e0a" secondAttribute="leading" constant="5" id="J5j-TZ-khg"/>
+                                    <constraint firstAttribute="trailing" secondItem="qYn-Vn-kBs" secondAttribute="trailing" id="bCq-UP-F1A"/>
+                                    <constraint firstItem="qYn-Vn-kBs" firstAttribute="leading" secondItem="nCm-Ty-e0a" secondAttribute="leading" id="bdi-WB-5w3"/>
+                                    <constraint firstAttribute="bottom" secondItem="MIR-M2-dX1" secondAttribute="bottom" id="oQL-Ut-FfU"/>
+                                    <constraint firstItem="MIR-M2-dX1" firstAttribute="leading" secondItem="nCm-Ty-e0a" secondAttribute="leading" id="pdz-Jf-IRb"/>
+                                    <constraint firstAttribute="bottom" secondItem="qYn-Vn-kBs" secondAttribute="bottom" id="qvn-g6-ioY"/>
+                                    <constraint firstAttribute="trailing" secondItem="qCl-xZ-LFc" secondAttribute="trailing" constant="5" id="rnb-iX-mrq"/>
+                                    <constraint firstItem="qCl-xZ-LFc" firstAttribute="top" secondItem="nCm-Ty-e0a" secondAttribute="top" constant="5" id="w9g-01-Nhl"/>
+                                    <constraint firstAttribute="trailing" secondItem="MIR-M2-dX1" secondAttribute="trailing" id="zVc-rd-vmM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Kok-Cf-m97" firstAttribute="top" secondItem="MIR-M2-dX1" secondAttribute="bottom" constant="8" id="4uQ-Ps-Fo0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MIR-M2-dX1" secondAttribute="trailing" constant="57" id="7Hw-56-qNJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MIR-M2-dX1" secondAttribute="bottom" constant="177" id="ELC-cV-yd9"/>
-                            <constraint firstItem="Kok-Cf-m97" firstAttribute="leading" secondItem="MIR-M2-dX1" secondAttribute="leading" id="LEm-Cr-cas"/>
-                            <constraint firstItem="Kok-Cf-m97" firstAttribute="trailing" secondItem="MIR-M2-dX1" secondAttribute="trailing" id="OjB-hS-gD2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A7x-xk-yUc" secondAttribute="bottom" constant="20" id="VzM-jS-FUK"/>
-                            <constraint firstItem="MIR-M2-dX1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WZy-3W-5nw"/>
-                            <constraint firstItem="A7x-xk-yUc" firstAttribute="trailing" secondItem="MIR-M2-dX1" secondAttribute="trailing" id="ZFX-pp-D3L"/>
-                            <constraint firstItem="A7x-xk-yUc" firstAttribute="leading" secondItem="MIR-M2-dX1" secondAttribute="leading" id="rg2-p1-Kyv"/>
-                            <constraint firstItem="MIR-M2-dX1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tVJ-ue-p2I"/>
-                            <constraint firstItem="MIR-M2-dX1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="wkG-F3-tiq"/>
+                            <constraint firstItem="nCm-Ty-e0a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2HH-Zd-hg0"/>
+                            <constraint firstItem="Kok-Cf-m97" firstAttribute="top" secondItem="nCm-Ty-e0a" secondAttribute="bottom" constant="8" id="CXV-gr-KlP"/>
+                            <constraint firstItem="A7x-xk-yUc" firstAttribute="leading" secondItem="nCm-Ty-e0a" secondAttribute="leading" id="TMT-RG-Akd"/>
+                            <constraint firstItem="Kok-Cf-m97" firstAttribute="trailing" secondItem="nCm-Ty-e0a" secondAttribute="trailing" id="Wua-g1-9d3"/>
+                            <constraint firstItem="A7x-xk-yUc" firstAttribute="trailing" secondItem="nCm-Ty-e0a" secondAttribute="trailing" id="ggf-Mi-cKT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A7x-xk-yUc" secondAttribute="bottom" constant="20" id="lTo-ac-tez"/>
+                            <constraint firstItem="nCm-Ty-e0a" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oPq-49-IKd"/>
+                            <constraint firstItem="Kok-Cf-m97" firstAttribute="leading" secondItem="nCm-Ty-e0a" secondAttribute="leading" id="ptQ-rE-9s3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nCm-Ty-e0a" secondAttribute="bottom" constant="177" id="v6R-PX-GFR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="btnOracle" destination="A7x-xk-yUc" id="jg2-C0-5Ua"/>
                         <outlet property="cardDescription" destination="Kok-Cf-m97" id="Hht-j2-0Ob"/>
+                        <outlet property="detailedDescription" destination="qCl-xZ-LFc" id="xyD-WW-JzR"/>
+                        <outlet property="faded" destination="qYn-Vn-kBs" id="STl-uw-WwS"/>
                         <outlet property="imgCard" destination="MIR-M2-dX1" id="Uaq-hg-npq"/>
+                        <outlet property="placeHolder" destination="nCm-Ty-e0a" id="MSg-iO-MEK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,8 +13,10 @@ class Model
     let majorArcanaCards:[String: MajorArcanaCard]
     var currentCard:MajorArcanaCard = MajorArcanaCard.fool
     
-    init(){
-        majorArcanaCards = MajorArcanaCard.createDeck()
+    init()
+    {
+        var deckOfCards = DeckOfCards()
+        majorArcanaCards = deckOfCards.getCardDictionary()
     }
 
     func respond() -> String
@@ -22,7 +24,7 @@ class Model
         let response = Int(arc4random_uniform(UInt32(majorArcanaCards.count)))
 
         currentCard = Array(majorArcanaCards.values)[response]
-        
+
         return currentCard.interpretation
     }
 }
