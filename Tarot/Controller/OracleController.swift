@@ -10,7 +10,7 @@ import UIKit
 
 class OracleController: UIViewController
 {
-    var model:Model = Model()
+    var model:Model = Model.sharedInstance
     
     @IBOutlet weak var cardDescription: UILabel!
     

@@ -10,7 +10,7 @@ import UIKit
 
 class TarotTableViewController: UITableViewController {
 
-    var  tarotList:[MajorArcanaCard] = Model().getSortedCardArray()
+    var  tarotList:[MajorArcanaCard] = Model.sharedInstance.getSortedCardArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,14 +82,17 @@ class TarotTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let indexPath = self.tableView.indexPathForSelectedRow!
+        let card:MajorArcanaCard = tarotList[indexPath.item]
+        
+        let detailVC = segue.destination as! TarotCardDetailViewController
+        
+        detailVC.cardName = card.imageName
+        
     }
-    */
+    
 
 }

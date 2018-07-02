@@ -13,7 +13,9 @@ class Model
     let majorArcanaCards:[String: MajorArcanaCard]
     var currentCard:MajorArcanaCard = MajorArcanaCard.fool
     
-    init()
+    static let sharedInstance = Model()
+    
+    private init()
     {
         var deckOfCards = DeckOfCards()
         majorArcanaCards = deckOfCards.getCardDictionary()

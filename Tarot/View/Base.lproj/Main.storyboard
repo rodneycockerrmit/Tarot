@@ -130,6 +130,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zBy-sP-OGA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NC3-QL-X5h">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -159,14 +160,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F5k-Sk-uUt">
-                                            <rect key="frame" x="20" y="5" width="33.5" height="20"/>
+                                            <rect key="frame" x="20.000000000000004" y="5" width="33.333333333333336" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pyh-jc-VQq">
-                                            <rect key="frame" x="20" y="25" width="43.5" height="14.5"/>
+                                            <rect key="frame" x="19.999999999999996" y="25.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -174,6 +175,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="UJl-fS-SkK" kind="show" id="06h-QQ-QGd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -181,11 +185,42 @@
                             <outlet property="delegate" destination="oLO-aX-ZGn" id="e2j-wO-pzz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="XKs-2k-NXm"/>
+                    <navigationItem key="navigationItem" title="List" id="XKs-2k-NXm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScF-Mh-ohr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="425" y="818"/>
+        </scene>
+        <!--Tarot Card Detail View Controller-->
+        <scene sceneID="tCm-yh-xAY">
+            <objects>
+                <viewController id="UJl-fS-SkK" customClass="TarotCardDetailViewController" customModule="Tarot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZSb-Dx-xCh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fool" translatesAutoresizingMaskIntoConstraints="NO" id="KdH-Gf-kQZ">
+                                <rect key="frame" x="20" y="81" width="179" height="308"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="179" id="41r-4u-t7z"/>
+                                    <constraint firstAttribute="height" constant="308" id="dAN-lO-PMr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KdH-Gf-kQZ" firstAttribute="top" secondItem="zmN-62-sMy" secondAttribute="top" constant="17" id="0p6-hu-Ra7"/>
+                            <constraint firstItem="KdH-Gf-kQZ" firstAttribute="leading" secondItem="zmN-62-sMy" secondAttribute="leading" constant="20" id="RTp-lN-yon"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zmN-62-sMy"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImage" destination="KdH-Gf-kQZ" id="ErA-59-65l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jl-EB-soy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176.8115942028987" y="814.4021739130435"/>
         </scene>
         <!--Main Nav Controller-->
         <scene sceneID="lk4-Yr-gye">
