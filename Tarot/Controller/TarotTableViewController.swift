@@ -8,13 +8,33 @@
 
 import UIKit
 
-class TarotTableViewController: UITableViewController {
+class TarotTableViewController: UITableViewController, UISearchResultsUpdating {
 
     var  tarotList:[MajorArcanaCard] = Model.sharedInstance.getSortedCardArray()
+    
+    var filteredTarotCards = [MajorArcanaCard]()
+    
+    let searchController = UISearchController(searchResultsController:nil)
+    
+    func updateSearchResults(for: UISearchController) {
+       filterContentForSearchText(searchText: searchController.searchBar.text!)
+    }
+    
+    func filterContentForSearchText(searchText: String, scope:String = "All")
+    {
+        filteredTarotCards = tarotList.filter
+        {
+             tarot in return tarot.name.lowercased().contains(searchText.lowercased())
+        }
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        tableView.tableHeaderView = searchController.searchBar
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -30,15 +50,31 @@ class TarotTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        if searchController.isActive && searchController.searchBar.text! != ""
+        {
+            return filteredTarotCards.count
+        }
         return tarotList.count
     }
 
+    func changeDataSource(indexPath: NSIndexPath) -> MajorArcanaCard
+    {
+        var card:MajorArcanaCard
+        if searchController.isActive && searchController.searchBar.text! != ""
+        {
+            card = filteredTarotCards[indexPath.row]
+        }
+        else{
+            card = tarotList[indexPath.row]
+        }
+        
+        return card
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tarotCell", for: indexPath)
         
-        let card:MajorArcanaCard = tarotList[indexPath.item]
+        let card:MajorArcanaCard = changeDataSource(indexPath: indexPath as NSIndexPath)
 
         cell.textLabel!.text = card.name
         cell.detailTextLabel!.text = String(card.hebrewLetter)
@@ -86,7 +122,7 @@ class TarotTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let indexPath = self.tableView.indexPathForSelectedRow!
-        let card:MajorArcanaCard = tarotList[indexPath.item]
+        let card:MajorArcanaCard = changeDataSource(indexPath: indexPath as NSIndexPath)
         
         let detailVC = segue.destination as! TarotCardDetailViewController
         
