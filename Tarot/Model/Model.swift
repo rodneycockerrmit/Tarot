@@ -18,6 +18,12 @@ class Model
         var deckOfCards = DeckOfCards()
         majorArcanaCards = deckOfCards.getCardDictionary()
     }
+    
+    func getSortedCardArray() -> [MajorArcanaCard]
+    {
+        let array = DeckOfCards.naturalOrder()
+        return array
+    }
 
     func respond() -> String
     {

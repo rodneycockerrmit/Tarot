@@ -15,6 +15,7 @@
 		012B743F204B55C800ADEA79 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B743E204B55C800ADEA79 /* Model.swift */; };
 		01A6C2C420537DB80078C726 /* MajorArcanaCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A6C2C320537DB80078C726 /* MajorArcanaCard.swift */; };
 		01A6C2CC2053A5950078C726 /* TarotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A6C2CB2053A5950078C726 /* TarotUITests.swift */; };
+		01E89C6F20E9E467003BEFB5 /* TarotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E89C6E20E9E467003BEFB5 /* TarotTableViewController.swift */; };
 		01F0E880205CB0CE005A40FC /* DeckOfCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F0E87F205CB0CE005A40FC /* DeckOfCards.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		01A6C2C92053A5940078C726 /* TarotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TarotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A6C2CB2053A5950078C726 /* TarotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotUITests.swift; sourceTree = "<group>"; };
 		01A6C2CD2053A5950078C726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01E89C6E20E9E467003BEFB5 /* TarotTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarotTableViewController.swift; sourceTree = "<group>"; };
 		01F0E87F205CB0CE005A40FC /* DeckOfCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckOfCards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 		012B743B204A51F900ADEA79 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				01E89C6E20E9E467003BEFB5 /* TarotTableViewController.swift */,
 				012B7429204A515200ADEA79 /* OracleController.swift */,
 			);
 			path = Controller;
@@ -236,6 +239,7 @@
 				012B743F204B55C800ADEA79 /* Model.swift in Sources */,
 				01A6C2C420537DB80078C726 /* MajorArcanaCard.swift in Sources */,
 				012B742A204A515200ADEA79 /* OracleController.swift in Sources */,
+				01E89C6F20E9E467003BEFB5 /* TarotTableViewController.swift in Sources */,
 				012B7428204A515200ADEA79 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

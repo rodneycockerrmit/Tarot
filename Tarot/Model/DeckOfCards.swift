@@ -19,6 +19,11 @@ struct DeckOfCards
         tabledCards = [MajorArcanaCard]()
     }
     
+    static func naturalOrder() -> [MajorArcanaCard]
+    {
+        return MajorArcanaCard.getDeck()
+    }
+    
     func getCardDictionary() -> [String: MajorArcanaCard]
     {
         return MajorArcanaCard.getCardDictionary()
