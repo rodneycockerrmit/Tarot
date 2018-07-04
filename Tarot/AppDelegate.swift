@@ -15,7 +15,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        /* Get references to all of our controllers so we can set the intial data */
+        let tabBarController = self.window!.rootViewController as! UITabBarController
+        
+        /* This is the controller on the second tab, so we use the index of 1 */
+        let splitViewController = tabBarController.viewControllers![1] as! UISplitViewController
+        
+        /* The split view controller has two navigation controllers, the first one is for the Master View, the second one is for the Detail View */
+        let navControllerForMasterView = splitViewController.viewControllers.first as! UINavigationController
+        let navControllerFordetailViewController = splitViewController.viewControllers.last as! UINavigationController
+        
+        /* The table view controller is the first or top controller of the nav controller for the master view */
+        let masterViewController = navControllerForMasterView.topViewController as! TarotTableViewController
+        
+        /* The detail view controller is the first or top controller of the nav controller for detail view */
+        let detailViewController = navControllerFordetailViewController.topViewController as! TarotCardDetailViewController
+        
+        /* Grab a default card from the model */
+        let defaultCard = Model.sharedInstance.currentCard
+        
+        /* Set this as the default card to display in both the table view and detail view */
+        masterViewController.currentCard = defaultCard
+        detailViewController.card = defaultCard
+        /* Set the delegate in the table view to point to the detail view */
+        masterViewController.delegate = detailViewController
+        
+        detailViewController.navigationItem .leftItemsSupplementBackButton = true
+        detailViewController.navigationItem .leftBarButtonItem = splitViewController.displayModeButtonItem
         return true
     }
 

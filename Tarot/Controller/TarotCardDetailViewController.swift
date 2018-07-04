@@ -13,11 +13,22 @@ class TarotCardDetailViewController: UIViewController {
     @IBOutlet weak var cardImage: UIImageView!
     
     var cardName:String?
+    var card:MajorArcanaCard?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        cardImage.image = UIImage(named: cardName!)
+        cardImage.image = UIImage(named: (card?.imageName)!)
         // Do any additional setup after loading the view.
+    }
+}
+
+extension TarotCardDetailViewController: Refresh
+{
+    func refresh(card: MajorArcanaCard)
+    {
+        self.loadView()
+        self.card = card
+        cardImage.image = UIImage(named: (card.imageName))
     }
 }

@@ -13,6 +13,7 @@
 		012B742F204A515200ADEA79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012B742E204A515200ADEA79 /* Assets.xcassets */; };
 		012B7432204A515200ADEA79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012B7430204A515200ADEA79 /* LaunchScreen.storyboard */; };
 		012B743F204B55C800ADEA79 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B743E204B55C800ADEA79 /* Model.swift */; };
+		015E590920ECB2B8006D4CC0 /* TarotSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015E590820ECB2B8006D4CC0 /* TarotSplitViewController.swift */; };
 		01A6C2C420537DB80078C726 /* MajorArcanaCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A6C2C320537DB80078C726 /* MajorArcanaCard.swift */; };
 		01A6C2CC2053A5950078C726 /* TarotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A6C2CB2053A5950078C726 /* TarotUITests.swift */; };
 		01E89C6F20E9E467003BEFB5 /* TarotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E89C6E20E9E467003BEFB5 /* TarotTableViewController.swift */; };
@@ -39,6 +40,7 @@
 		012B7431204A515200ADEA79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		012B7433204A515200ADEA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		012B743E204B55C800ADEA79 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		015E590820ECB2B8006D4CC0 /* TarotSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotSplitViewController.swift; sourceTree = "<group>"; };
 		01A6C2C320537DB80078C726 /* MajorArcanaCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorArcanaCard.swift; sourceTree = "<group>"; };
 		01A6C2C92053A5940078C726 /* TarotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TarotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A6C2CB2053A5950078C726 /* TarotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarotUITests.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				01E89C6E20E9E467003BEFB5 /* TarotTableViewController.swift */,
 				012B7429204A515200ADEA79 /* OracleController.swift */,
 				01E89C7020E9F61D003BEFB5 /* TarotCardDetailViewController.swift */,
+				015E590820ECB2B8006D4CC0 /* TarotSplitViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				01A6C2C420537DB80078C726 /* MajorArcanaCard.swift in Sources */,
 				012B742A204A515200ADEA79 /* OracleController.swift in Sources */,
 				01E89C6F20E9E467003BEFB5 /* TarotTableViewController.swift in Sources */,
+				015E590920ECB2B8006D4CC0 /* TarotSplitViewController.swift in Sources */,
 				012B7428204A515200ADEA79 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

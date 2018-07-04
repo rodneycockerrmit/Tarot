@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol Refresh
+{
+    func refresh(card:MajorArcanaCard)
+}
+
 class TarotTableViewController: UITableViewController, UISearchResultsUpdating {
 
     var  tarotList:[MajorArcanaCard] = Model.sharedInstance.getSortedCardArray()
@@ -15,6 +20,10 @@ class TarotTableViewController: UITableViewController, UISearchResultsUpdating {
     var filteredTarotCards = [MajorArcanaCard]()
     
     let searchController = UISearchController(searchResultsController:nil)
+    
+    var currentCard:MajorArcanaCard?
+    
+    var delegate:Refresh?
     
     func updateSearchResults(for: UISearchController) {
        filterContentForSearchText(searchText: searchController.searchBar.text!)
@@ -128,6 +137,26 @@ class TarotTableViewController: UITableViewController, UISearchResultsUpdating {
         
         detailVC.cardName = card.imageName
         
+    }
+    
+    override func tableView(_ tableView: UITableView , didSelectRowAt indexPath: IndexPath)
+    {
+        
+        if searchController.isActive && searchController.searchBar.text! != ""
+        {
+            currentCard = filteredTarotCards[indexPath.row]
+        }
+        else{
+            currentCard = tarotList[indexPath.row]
+        }
+        
+        // This points to our detail View controller so we are setting the property on the detail view when we select a card in our master view.
+        self.delegate?.refresh(card: currentCard!)
+        
+        if let detailViewController = self.delegate as? TarotCardDetailViewController
+        {
+            splitViewController?.showDetailViewController(detailViewController.navigationController!, sender: nil)
+        }
     }
     
 
